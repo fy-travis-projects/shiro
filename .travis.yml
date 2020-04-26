@@ -10,4 +10,3 @@ addons:
 install: true
 script:
 - mvn install -DskipTests=true
-after_scripts: bash .travis/deploy.sh
