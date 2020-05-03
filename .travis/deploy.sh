@@ -25,7 +25,7 @@ mkdir project
 cd $HOME/build/fy-travis-projects/$name
 pwd 
 ls -al
-find . -name 'SNAPSHOT*.jar' -exec mv {} $HOME/project \;
+find . -name '*SNAPSHOT.jar' -exec mv {} $HOME/project \;
 cd $HOME
 
 
