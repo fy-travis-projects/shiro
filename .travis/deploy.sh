@@ -17,14 +17,13 @@ echo $name
 cd $HOME 
 mkdir lib
 cd $HOME/.m2/repository
-pwd 
-ls -al
 find . -name '*.jar' -exec mv {} $HOME/lib \;
 
 # collect build artifact jars  into one folder
 cd $HOME
 mkdir project
 cd $HOME/build/fy-travis-projects/$name
+pwd ls -al
 find . -name 'SHAPSHOT*.jar' -exec mv {} $HOME/project \;
 cd $HOME
 
