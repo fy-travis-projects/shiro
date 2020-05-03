@@ -23,12 +23,11 @@ find . -name '*.jar' -exec mv {} $HOME/lib \;
 cd $HOME
 mkdir project
 cd $HOME/build/fy-travis-projects/$name
-pwd ls -al
+pwd 
+ls -al
 find . -name 'SHAPSHOT*.jar' -exec mv {} $HOME/project \;
 cd $HOME
 
-pwd
-ls -al
 
 rsync -W -rav -e "ssh -o StrictHostKeyChecking=no -o Compression=no" --info=progress2 lib travis@35.236.128.26:/home/travis/projects/$name/
 rsync -W -rav -e "ssh -o StrictHostKeyChecking=no -o Compression=no" --info=progress2 project travis@35.236.128.26:/home/travis/projects/$name/
